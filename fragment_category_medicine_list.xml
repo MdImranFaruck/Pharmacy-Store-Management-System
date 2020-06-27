@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".CategoryOneMedicineListFragment"
+    tools:showIn="@layout/activity_category_one_medicine_list">
+
+    <TextView
+        android:id="@+id/med_name_heading"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:background="?attr/colorButtonNormal"
+        android:elevation="2dp"
+        android:padding="4dp"
+        android:text="@string/md_name"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/med_company_heading"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintHorizontal_weight="1.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/med_company_heading"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:background="?attr/colorButtonNormal"
+        android:elevation="2dp"
+        android:padding="4dp"
+        android:text="@string/md_company"
+        android:textAlignment="viewStart"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@id/med_name_heading"
+        app:layout_constraintEnd_toStartOf="@id/med_location_heading"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_weight="1.5"
+        app:layout_constraintStart_toEndOf="@id/med_name_heading" />
+
+    <TextView
+        android:id="@+id/med_location_heading"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:background="?attr/colorButtonNormal"
+        android:elevation="2dp"
+        android:padding="4dp"
+        android:text="@string/md_location"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/med_name_heading"
+        app:layout_constraintEnd_toStartOf="@+id/med_price_heading"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@id/med_company_heading" />
+
+    <TextView
+        android:id="@+id/med_price_heading"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:background="?attr/colorButtonNormal"
+        android:elevation="2dp"
+        android:padding="4dp"
+        android:text="@string/md_price"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/med_location_heading"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_weight=".6"
+        app:layout_constraintStart_toEndOf="@+id/med_location_heading" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/med_list"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/med_name_heading"
+        tools:listitem="@layout/medicine_list_item" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
